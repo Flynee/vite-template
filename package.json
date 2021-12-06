@@ -1,0 +1,50 @@
+{
+  "name": "vite-template",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build  --mode production",
+    "build:dev": "vue-tsc --noEmit && vite build --mode development",
+    "serve": "vite preview",
+    "lint": "eslint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "pinia": "^2.0.0-rc.10",
+    "vue": "^3.2.16",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "dart-sass": "^1.25.0",
+    "eslint": "^8.4.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.3.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.0.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vite-plugin-compression": "^0.3.6",
+    "vue-tsc": "^0.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": "eslint",
+    "*.{html,vue,css,sass,scss}": "stylelint"
+  }
+}
